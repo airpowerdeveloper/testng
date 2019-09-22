@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suiteName">
+    <!--class1/2/3中的测试类都执行-->
+    <test name="runAll">
+        <classes>
+            <class name="org.testng.groupstwo.GroupsOnClass1"/>
+            <class name="org.testng.groupstwo.GroupsOnClass2"/>
+            <class name="org.testng.groupstwo.GroupsOnClass3"/>
+        </classes>
+    </test>
+
+    <!--使用groups标签，只执行group name为stu的测试类-->
+    <test name="onlyRunStu">
+        <groups>
+            <run>
+                <include name="stu"/>     <!--只执行group name为stu的测试类-->
+            </run>
+        </groups>
+
+        <classes>
+            <class name="org.testng.groupstwo.GroupsOnClass1"/>
+            <class name="org.testng.groupstwo.GroupsOnClass2"/>
+            <class name="org.testng.groupstwo.GroupsOnClass3"/>
+        </classes>
+    </test>
+</suite>
