@@ -4,6 +4,12 @@
     <test verbose="2" preserve-order="true" name="E:/Project/testng">
         <classes>
             <class name="org.testng.groupsone.GroupsOnMethod">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
             </class>
         </classes>
     </test>
