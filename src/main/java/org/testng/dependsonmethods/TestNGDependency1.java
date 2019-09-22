@@ -5,24 +5,24 @@ import org.testng.annotations.Test;
 
 public class TestNGDependency1 {
     @Test(dependsOnMethods = {"testMethod2"})
-    public void testMethod1(){
+    public void testMethod1() {
         System.out.println("testMethod1");
     }
 
     @Test
-    public void testMethod2(){
-        int result = 2+6;
+    public void testMethod2() {
+        int result = 2 + 6;
         Assert.assertEquals(result, 9);
         System.out.println("testMethod2");
     }
 
     @Test(dependsOnMethods = {"testMethod1"})
-    public void testMethod3(){
+    public void testMethod3() {
         System.out.println("testMethod3");
     }
 
     @Test
-    public void testMethod4(){
+    public void testMethod4() {
         System.out.println("testMethod4");
     }
 }
