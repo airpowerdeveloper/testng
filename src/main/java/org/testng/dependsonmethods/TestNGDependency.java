@@ -3,7 +3,7 @@ package org.testng.dependsonmethods;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestNGDependency {
+public class  TestNGDependency {
     @Test(dependsOnMethods = {"testMethod2"})
     public void testMethod1() {
         System.out.println("testMethod1");
