@@ -2,7 +2,7 @@ package org.testng.dependsongroups;
 
 import org.testng.annotations.Test;
 
-public class  Demo {
+public class Demo {
     @Test
     public void test() {
         System.out.println("test");
