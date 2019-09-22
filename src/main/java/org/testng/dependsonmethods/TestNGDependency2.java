@@ -3,8 +3,8 @@ package org.testng.dependsonmethods;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestNGDependency {
-    @Test(dependsOnMethods = {"testMethod2"})
+public class TestNGDependency2 {
+    @Test(dependsOnMethods = {"testMethod2"},alwaysRun = true)
     public void testMethod1(){
         System.out.println("testMethod1");
     }
@@ -12,7 +12,7 @@ public class TestNGDependency {
     @Test
     public void testMethod2(){
         int result = 2+6;
-        Assert.assertEquals(result, 8);
+        Assert.assertEquals(result, 9);
         System.out.println("testMethod2");
     }
 
